@@ -1,0 +1,35 @@
+/Roms/.Nintendo Entertainment System (FC)/Mega Man (USA).zip
+/Roms/.Nintendo Entertainment System (FC)/Mega Man 2 (USA).zip
+/Roms/.Nintendo Entertainment System (FC)/Mega Man 3 (USA).zip
+/Roms/.Nintendo Entertainment System (FC)/Mega Man 4 (USA) (Rev A).zip
+/Roms/.Nintendo Entertainment System (FC)/Mega Man 5 (USA).zip
+/Roms/.Nintendo Entertainment System (FC)/Mega Man 6 (USA).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Mega Man 7 (USA).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Mega Man & Bass (Japan) [T-En by Aeon Genesis v1.00] [Add by Blade133bo v1.1] [n].zip
+/Roms/.Sony PlayStation (PS)/Mega Man 8 (USA).chd
+/Roms/.Super Nintendo Entertainment System (SFC)/Mega Man X (USA) (Rev 1).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Mega Man X2 (USA).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Mega Man X3 (USA).zip
+/Roms/.Sony PlayStation (PS)/Mega Man X4 (USA).chd
+/Roms/.Sony PlayStation (PS)/Mega Man X5 (USA).chd
+/Roms/.Sony PlayStation (PS)/Mega Man X6 (USA) (Rev 1).chd
+/Roms/.Sony PlayStation (PS)/Mega Man Legends (USA).chd
+/Roms/.Sony PlayStation (PS)/Mega Man Legends 2 (USA).chd
+/Roms/.Sony PlayStation (PS)/Misadventures of Tron Bonne, The (USA).chd
+/Roms/.Game Boy (GB)/Mega Man - Dr. Wily's Revenge (USA).zip
+/Roms/.Game Boy (GB)/Mega Man II (USA).zip
+/Roms/.Game Boy (GB)/Mega Man III (USA).zip
+/Roms/.Game Boy (GB)/Mega Man IV (USA).zip
+/Roms/.Game Boy (GB)/Mega Man V (USA) (SGB Enhanced).zip
+/Roms/.Game Boy Color (GBC)/Mega Man Xtreme (USA, Europe).zip
+/Roms/.Game Boy Color (GBC)/Mega Man Xtreme 2 (USA, Europe).zip
+/Roms/.Game Boy Advance (GBA)/Mega Man Zero (USA, Europe).zip
+/Roms/.Game Boy Advance (GBA)/Mega Man Zero 2 (USA).zip
+/Roms/.Game Boy Advance (GBA)/Mega Man Zero 3 (USA).zip
+/Roms/.Game Boy Advance (GBA)/Mega Man Zero 4 (USA).zip
+/Roms/.Sega Game Gear (GG)/Mega Man (USA).zip
+/Roms/.Sega Genesis (MD)/Mega Man - The Wily Wars (USA) (Genesis Mini).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Mega Man Soccer (USA).zip
+/Roms/.Neo Geo Pocket Color (NGPC)/Rockman - Battle & Fighters (Japan) [T-En by Marc_max v1.0] [i].zip
+/Roms/.Sony PlayStation (PS)/Rockman - Battle & Chase (Japan)/Rockman - Battle & Chase (Japan).cue
+/Roms/.Pico-8 (P8)/Pico Man.p8.png

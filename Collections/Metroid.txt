@@ -1,0 +1,5 @@
+/Roms/.Nintendo Entertainment System (FC)/Metroid (USA).zip
+/Roms/.Game Boy Advance (GBA)/Metroid - Zero Mission (USA).zip
+/Roms/.Game Boy (GB)/Metroid II - Return of Samus (World).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Super Metroid (Japan, USA) (En,Ja).zip
+/Roms/.Game Boy Advance (GBA)/Metroid Fusion (USA, Australia).zip

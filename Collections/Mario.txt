@@ -1,0 +1,13 @@
+/Roms/.Nintendo Entertainment System (FC)/Super Mario Bros. + Duck Hunt (USA).zip
+/Roms/.Nintendo Entertainment System (FC)/Super Mario Bros. 2 (USA) (Rev A).zip
+/Roms/.Nintendo Entertainment System (FC)/Super Mario Bros. 3 (USA) (Rev A).zip
+/Roms/.Game Boy (GB)/Super Mario Land (World) (Rev A).zip
+/Roms/.Game Boy (GB)/Super Mario Land 2 - 6 Golden Coins (USA, Europe) (Rev B).zip
+/Roms/.Game Boy Color (GBC)/Super Mario Bros. Deluxe (USA, Europe) (Rev B).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Super Mario All-Stars (USA).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Super Mario World (USA).zip
+/Roms/.Super Nintendo Entertainment System (SFC)/Super Mario World 2 - Yoshi's Island (USA) (Rev 1).zip
+/Roms/.Game Boy Advance (GBA)/Super Mario Advance - Super Mario Bros. 2 (USA, Europe).zip"
+/Roms/.Game Boy Advance (GBA)/Super Mario Advance 2 - Super Mario World (USA, Australia).zip"
+/Roms/.Game Boy Advance (GBA)/Super Mario Advance 3 - Yoshi's Island (USA).zip"
+/Roms/.Game Boy Advance (GBA)/Super Mario Advance 4 - Super Mario Bros. 3 (USA, Australia) (Rev 1).zip"

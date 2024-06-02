@@ -1,0 +1,27 @@
+/Roms/.Game Boy (GB)/Pokemon - Green Version (Japan) (SGB Enhanced) [T-En by LandaR v1.0] [n].zip
+/Roms/.Game Boy (GB)/Pokemon - Blue Version (USA, Europe) (SGB Enhanced).zip
+/Roms/.Game Boy (GB)/Pokemon - Red Version (USA, Europe) (SGB Enhanced).zip
+/Roms/.Game Boy (GB)/Pokemon - Yellow Version - 151 Patched.gb
+/Roms/.Game Boy (GB)/Pokemon - Yellow Version - Special Pikachu Edition (USA, Europe) (GBC,SGB Enhanced).zip
+/Roms/.Game Boy Color (GBC)/Pokemon - Gold Version (USA, Europe) (SGB Enhanced).zip
+/Roms/.Game Boy Color (GBC)/Pokemon - Silver Version (USA, Europe) (SGB Enhanced).zip
+/Roms/.Game Boy Color (GBC)/Pokemon - Crystal Version (251 Hack).gbc
+/Roms/.Game Boy Color (GBC)/Pokemon - Crystal Version (USA, Europe) (Rev A).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon - Ruby Version (USA, Europe) (Rev 2).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon - Sapphire Version (USA, Europe) (Rev 2).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon - Emerald Version - Nat'l Dex 386.zip
+/Roms/.Game Boy Advance (GBA)/Pokemon - Emerald Version (USA, Europe).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon - FireRed Version (USA, Europe) (Rev 1).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon - LeafGreen Version (USA, Europe) (Rev 1).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon - Ultra Violet.zip
+/Roms/.Game Boy Color (GBC)/Pokemon Trading Card Game (USA) (SGB Enhanced).zip
+/Roms/.Game Boy Color (GBC)/Pokemon Trading Card Game 2 - The Invasion of Team GR! (Japan) (Translated).zip
+/Roms/.Game Boy Color (GBC)/Pokemon Puzzle Challenge (USA).zip
+/Roms/.Game Boy Color (GBC)/Pokemon Pinball (USA) (Rumble Version) (SGB Enhanced).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon Pinball - Ruby & Sapphire (USA).zip
+/Roms/.Game Boy Advance (GBA)/Pokemon Mystery Dungeon - Red Rescue Team (USA, Australia).zip
+
+
+
+
+
