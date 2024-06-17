@@ -15,9 +15,10 @@ I. Bonus emulators within MinUI
  1) DC.pak - adds stock's Flycast Xtreme RetroArch core for Dreamcast emulation.
  2) DS.pak - adds stock's DraStic standalone for Nintendo DS emulation.
  3) N64.pak - adds stock's Mupen64 Plus Next RetroArch core for Nintendo 64 emulation.
- 4) PSPRA.pak - adds stock's PPSSPP RetroArch core for Playstation Portable emulation.
- 5) PSPSA.pak - adds stock's PPSSPP standalone for Playstation Portable emulation.
- 6) VARCADE.pak - adds stock's FBNEO pre-configured for vertical arcade emulation (RG28xx only).
+ 4) P8-NATIVE.pak - adds native (i.e. not emulated) Pico-8. (see "Installing Pico-8" section)
+ 5) PSPRA.pak - adds stock's PPSSPP RetroArch core for Playstation Portable emulation.
+ 6) PSPSA.pak - adds stock's PPSSPP standalone for Playstation Portable emulation.
+ 7) VARCADE.pak - adds stock's FBNEO pre-configured for vertical arcade emulation.
 
 II. Tools to get more out of MinUI
 
@@ -38,7 +39,8 @@ II. Tools to get more out of MinUI
     to their full descriptions with parenthetical information (such as version number or
     publisher), to their bare filenames, and back again. Note that this tool will change its name
     to whatever view it will set the arcade titles to.
-
+ 9) Splore.pak (and associated stock OS apps) - gives full access to Splore, which is Pico-8's 
+    lovely native launcher and uber-addictive free game store. (see "Installing Pico-8 section)
 
 
  ####################
@@ -47,17 +49,70 @@ II. Tools to get more out of MinUI
 
 To install these paks, simply copy the included Emus, Roms, .Collections, and Tools folders onto
 the root of the SD card you have already installed MinUI on, merging them with the existing folders
-of the same name. 
+of the same name. Then, just add your Roms to the appropriate subfolders in "Roms/" and you should
+be good to go.
 
-Then, don't forget to add your ROMs to the appropriate subfolders in Roms - you'll want to do this
-step before you run the dual boot scripts, because the one that switches back to MinUI from stock
-is set to clean up any empty folders in the Roms folder, so you would haveto create new, correctly
-named folders for your ROMs if that happened.
+If you don't want to install a particular extra pak, no problem - the only paks that rely on the
+existence of one another are those related to Splore and native Pico-8. You can freely delete any 
+of these extras either before or after you load them onto your SD card without affecting any functionality of either MinUI or the stock firmware.
 
-If you don't want to install a particular extra pak, no problem - there are no interdependencies 
-between them that are not mentioned above. You can freely delete any of these extras either before 
-or after you load them onto your SD card without affecting any functionality of either MinUI or the
-stock firmware.
+
+ ########################
+#    INSTALLING PICO-8   #
+ ########################
+
+Installing native Pico-8 is a little more involved, but ultimately comes down to dragging and
+dropping a few files and folders where you need them, then running a couple of tools.
+
+Native Pico-8 on MinUI REQUIRES the following files and folders from this Pak Pack to be installed:
+
+- "Roms/APPS/REBOOT-INTO-MINUI.sh"
+- "Tools/rg35xxplus/Reboot into Stock.pak" (and its contents)
+- "Tools/rg35xxplus/Splore.pak" (and its contents)
+- "Tools/rgb30/Splore.pak" (and its contents)
+
+In order to use Splore to download free games from the BBS, you will also need:
+
+- "Roms/APPS/Install_Prereqs.sh"
+
+To get the most out of native Pico-8, the following files and folders can be installed as well:
+
+- "Emus/rg35xxplus/P8-NATIVE.pak" (and its contents)     - launches native P8 games from MinUI menu
+- "Emus/rgb30/P8-NATIVE.pak" (and its contents)  - gives full compat. w/ MinUI's native P8 on RGB30
+- "Roms/APPS/Splore.sh"              - allows native P8 and Splore to be launched as a stock OS app
+- "Roms/APPS/Import_Carts_to_Splore.sh"        - adds existing carts in Roms/PICO to offline Splore
+- "Roms/Pico-8 - Native (P8-NATIVE)" (and its contents)    - holds carts to launch w/ P8-NATIVE.pak
+- "Roms/PICO" (and its contents)    - carts for stock's Fake-08 emulator; can be imported to Splore
+
+1) Install your chosen subset of the above carts and apps by copying them to your SD card.
+
+2) Next, you will need a copy of the latest and greatest version of the Raspberry Pi edition of 
+   Pico-8. This can be bought and downloaded at https://www.lexaloffle.com/games.php?page=updates .
+   Inside the .zip should be a folder labeled "pico-8" - copy this whole folder (not just its 
+   contents) into "Tools/rgb30/Splore.pak". [Yes, the rgb30 Splore.pak, not the rg35xxplus one.]
+
+3) If you already have some Pico-8 carts that you would like to put onto your device for offline
+   play, you can add them to the "Roms/PICO" folder on either SD card at this point. If you are
+   using a device that does not have Wi-Fi, you will definitely want to do this.
+
+4) Now, load your SD cards into your device and boot it up. Then use the "Reboot into Stock" tool.
+
+5) If you are using a device that has Wi-Fi, go to Settings > Network Settings > WIFI Settings, and 
+   set Enable WIFI to ON. Then input your WIFI Name and WIFI Password and make sure that you get 
+   assigned an IP address and your Status is Connected - then you can go back to the main menu.
+
+6) If you are connected to the internet, go to App Center > APPS > TF02, and run Install_Prereqs. 
+   You will get a Loading message, and the screen may turn black. Just be patient, as it takes a 
+   minute or two to run this script. This step is required before you will be able to download 
+   and play non-local carts off of Splore. 
+
+7) If you preloaded the "Roms/PICO" folders in step 3, run the Import_Carts_to_Splore app now. 
+   Again, if you are on a device without Wi-Fi, this step is pretty important.
+
+8) Now, you will be able to use Splore to play Pico-8 natively - no inaccurate emulation required -
+   from both the stock OS and MinUI! For best results, make sure that you are connected to the
+   internet BEFORE launching Splore. If you have booted back to MinUI, just wait for the signal
+   icon in the top right corner to appear.
 
 
 
@@ -98,22 +153,16 @@ To create your own MinUI paks for other stock RA cores:
 1) Swapping between default and collections-based views will clear your Recently Played list. Not 
    likely to change with future revisions.
 
-2) The power button does not work for these bonus paks like it does in MinUI proper, nor does it
-   work the same as it does for the stock firmware, and may instead power off or freeze the system,
-   requiring you to restart it. So, no hot-swapping between the analog stick and D-pad using the
-   power button, at the moment.
-
-3) The stylus is not mapped to anything by default for DS emulation, so you'll have to figure out
-   and map your own control scheme to get games that rely on it to be fully playable. Still working
-   on this one too, since the stock firmware uses that pesky power button for this.
-
-4) Many of these custom paks are written assuming you are running them off of the second SD card,
+2) Many of these custom paks are written assuming you are running them off of the second SD card,
    so some things may not work as intended if you run MinUI completely off of SD card 1. Depending
    on demand, this may be fixed in the future. Or, you can modify the scripts yourself to change
    any reference of /mnt/sdcard/ to /mnt/mmc/ ...
 
-5) VARCADE.pak currently only works properly on the RG28xx, though an update to address this is in 
-   the works.
+3) Hotkey to swap between d-pad and analog stick input for PSPSA, PSPRA, N64, and DC has a side
+   effect of temporarily disabling the physical A button as well.
+   
+4) Volume and brightness controls within the stock OS's native Splore app do not listen to the
+   physical buttons and must be done within software.
 
 
  ###############
@@ -124,9 +173,18 @@ To create your own MinUI paks for other stock RA cores:
   folders in this pak pack, and I maintain the project as a whole. If you'd like to support my work
   you can donate at https://ko-fi.com/rymsar .
 
-- Shaun Inman- for creating and maintaining the excellent MinUI, and for providing the dual boot
+- Shaun Inman - for creating and maintaining the excellent MinUI, and for providing the dual boot
   scripts (which I have only minorly modified). Also, for tolerating all my Discord pings, and 
-  always helping when I don't know how to accomplish something.
+  always helping out with scripting when I don't know how to accomplish something.
+
+- Brenoit - for his extensive help and testing, especially with regard to the native Pico-8
+  functionality. Cool dude.
+
+- Stubbs (Retro Handhelds) - for leading the amazing community that has connected me with all these
+  wonderful people.
+
+- Russ (RetroGameCorps) - for linking to this repo from his SP setup guide, leading to much
+  greater visibility for our project.
 
 - G.R.H. (a.k.a. cbepx-me) - for creating many of the scripts in the stock firmware, which these 
   paks sometimes either reference or modify. Still unclear to me whether they are an Anbernic 
@@ -137,12 +195,13 @@ To create your own MinUI paks for other stock RA cores:
 - Anbernic - for developing and making all these nifty RG__XX__ devices, without which none of the
   aforementioned work would exist.
 
-- Testers - the following Discord users have been invaluable in testing on devices I do not yet
-  have. Without their time and effort, this project would not be able to progress.
+- Testers - the following Discord users have been invaluable in testing, especially on devices I do
+  not have. Without their time and effort, this project would not be able to progress.
      - Lesynn
      - RNS
      - ozzyozzyjames
-     - Brenoit
+     - nbrXD
+     - axelrider
 
 - If I forgot anyone else, please let me know so I can add them to the credits!
 
@@ -192,7 +251,12 @@ v7 - 2024-05-29
        you from viewing and launching any VARCADE games (modified map.txt and .map_detail.txt)
      - Overhauled the readme, if that matters for anything
 
-v8 - 2024-06-?? [WORK STILL IN PROGRESS; NOT READY FOR RELEASE]
-     - Native Pico-8 APP for stock firmware (RG28xx only)
-     - Splore.pak and P8-NATIVE.pak for MinUI (RG28xx only)
-     - VARCADE.pak now detects which device you are using and launches accordingly.
+v8 - 2024-06-16
+     - Added P8-NATIVE.pak and Splore.pak for both H700 line and RGB30
+     - Added stock OS apps: Splore.sh, Install_Prereqs.sh, Import_Carts_to_Splore.sh
+     - Updated VARCADE.pak to only rotate controls for the RG28xx
+     - Power key now switches back and forth from stylus input on DS.pak
+     - Select key now switches back and forth between D-pad and Analog stick input for DC.pak and
+       N64.pak (see known issues)
+     - R2 key now switches back and forth between D-pad and Analog stick input for PSPRA.pak and
+       PSPSA.pak (see known issues)

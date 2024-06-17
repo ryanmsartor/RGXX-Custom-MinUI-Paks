@@ -1,8 +1,20 @@
 #!/bin/sh
 
-export LD_LIBRARY_PATH="/mnt/vendor/sdl2:$LD_LIBRARY_PATH"
+PICO8_DIR="/mnt/sdcard/Tools/rgb30/Splore.pak/pico-8"
+DIR="/mnt/sdcard/Tools/rg35xxplus/Splore.pak"
 
-DIR="$(dirname "$0")"
-cd "$DIR"
+export LD_LIBRARY_PATH="$DIR:$LD_LIBRARY_PATH"
+export PATH="$DIR:$PATH"
 
-cd ./pico-8 && ./pico8_dyn -splore -root_path "../../PICO/" -joystick 0 > ./splore-log.txt 2>&1
+# add sdl controller file if not present in pico-8 folder
+if [ ! -f "$PICO8_DIR/sdl_controllers.txt" ]; then
+ cp "$DIR/sdl_controllers.txt" "$PICO8_DIR";
+fi
+
+# ensure correct sdl controller file is in place
+cmp -s "$DIR/sdl_controllers.txt" "$PICO8_DIR/sdl_controllers.txt"
+if [ "$?" -eq 1 ]; then
+	cp "$DIR/sdl_controllers.txt" "$PICO8_DIR";
+fi
+
+cd "$PICO8_DIR" && ./pico8_dyn -splore -joystick 0 > ./splore-log.txt 2>&1

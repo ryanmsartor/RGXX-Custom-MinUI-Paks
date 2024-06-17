@@ -22,7 +22,6 @@ RABIN="/mnt/vendor/deep/retro/retroarch"
 G_DIR="/mnt/mod/ctrl/configs"
 G_CONF="${G_DIR}/system.cfg"
 BIN_DIR="/mnt/mod/ctrl"
-DARKSET="/.config/retroarch/dark.txt"
 VARCSET="/.config/retroarch/varc.txt"
 SHADER_CFG="/mnt/vendor/deep/retro/config/global.glslp"
 
@@ -104,24 +103,6 @@ function reset_varc() {
 	[ -f "${REMAP_FILE}" ] && rm -f "${REMAP_FILE}"
 }
 
-function close_dark() {
-	# 游戏结束后关闭夜间模式滤镜
-	if grep -q "video_filter\ =" ${DARKSET}; then
-		a=`cat ${DARKSET}`
-		if grep -q "video_filter\ =" ${RACONFIG}; then
-			sed -i '/video_filter = "/d' ${RACONFIG}
-		fi
-		echo "$a" >> ${RACONFIG}
-	else
-		if grep -q "video_filter\ =" ${RACONFIG}; then
-			sed -i -e '/video_filter\ =/c video_filter\ = \"\"' ${RACONFIG}
-		else
-			echo "video_filter = \"\"" >> ${RACONFIG}
-		fi
-	fi
-	rm -f ${DARKSET}
-}
-
 function close_bezel() {
 	# 关闭边框
 	sed -i '/input_overlay_enable = "/d' ${RACONFIG}
@@ -164,21 +145,20 @@ then
 	touch ${RACONFIG_EMU}
 fi
 
-# 连发快捷键
-VARC=""
-if [[ ! "${3}" == "auto" ]]; then
-	rm -f ${VARCSET}
-	touch ${VARCSET}
-	# 备份原有连发快捷键并设置新快捷键
-	sed -n '0,/'input_player1_turbo_btn\ ='/{/input_player1_turbo_btn =/p}' ${RACONFIG} > ${VARCSET}
-	sed -i '/input_player1_turbo_btn =/d' ${RACONFIG}
-	echo "input_player1_turbo_btn = \""$TURBO_BTN"\"" >> ${RACONFIG}
+# rotate controls for 28xx only
+if grep -q "RG28xx" /mnt/vendor/oem/board.ini; then
+	VARC=""
+	if [[ ! "${3}" == "auto" ]]; then
+		rm -f ${VARCSET}
+		touch ${VARCSET}
+		# 备份原有连发快捷键并设置新快捷键
+		sed -n '0,/'input_player1_turbo_btn\ ='/{/input_player1_turbo_btn =/p}' ${RACONFIG} > ${VARCSET}
+		sed -i '/input_player1_turbo_btn =/d' ${RACONFIG}
+		echo "input_player1_turbo_btn = \""$TURBO_BTN"\"" >> ${RACONFIG}
+	fi
+	VARC="1"
+	set_varc
 fi
-
-# 竖版街机专门处理
-
-VARC="1"
-set_varc
 
 # 边框设置
 ${BIN_DIR}/bezels.sh "${EMU}" "${ROMFILE}" "${VARC}"
@@ -201,33 +181,6 @@ else
 		echo "savestate_auto_save = \""false"\"" >> ${RACONFIG}
 		echo "network_cmd_enable = \""false"\"" >> ${RACONFIG}
 	fi
-fi
-
-# 夜间模式
-if grep -q "global.dark=1" ${G_CONF} && [[ ! ${EMU} == "PICO" ]] && [[ ! ${EMU} == "GW" ]]; then
-	rm -f ${DARKSET}
-	touch ${DARKSET}
-	if grep -q "video_filter\ =" ${RACONFIG}; then
-		sed -n '0,/'video_filter\ ='/{/video_filter =/p}' ${RACONFIG} > ${DARKSET}
-		sed -i -e '/video_filter\ =/c video_filter\ = \"/mnt/vendor/deep/retro/filters/video/Darken.filt\"' ${RACONFIG}
-	else
-		echo "video_filter = \"\"" > ${DARKSET}
-		echo "video_filter = \"/mnt/vendor/deep/retro/filters/video/Darken.filt\"" >> ${RACONFIG}
-	fi
-else
-	if grep -q "Darken.filt" ${RACONFIG}; then
-		sed -i '/video_filter = "/d' ${RACONFIG}
-		echo "video_filter = \"\"" >> ${RACONFIG}
-	fi
-fi
-
-# 开机自动运行游戏时自动载入即时存档
-if [[ "${3}" == "auto" ]] && [[ ! ${EMU} == "DREAMCAST" ]]; then
-	sed -i '/savestate_auto_load =/d' ${RACONFIG}
-	echo "savestate_auto_load = \""true"\"" >> ${RACONFIG}
-else
-	sed -i '/savestate_auto_load =/d' ${RACONFIG}
-	echo "savestate_auto_load = \""false"\"" >> ${RACONFIG}
 fi
 
 # 切换 RA 热键
@@ -254,12 +207,10 @@ fi
 # 运行游戏
 eval ${RUNTHIS}
 
-# 恢复连发设置
+if grep -q "RG28xx" /mnt/vendor/oem/board.ini; then
 	reset_varc &
-# 关闭夜间模式
-if [ -f ${DARKSET} ]; then
-	close_dark &
 fi
+
 # 关闭边框
 if ! grep -q "global.bezel=2" ${G_CONF} ; then
 	close_bezel &
