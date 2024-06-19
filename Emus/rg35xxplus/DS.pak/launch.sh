@@ -2,11 +2,11 @@
 
 EMU_TAG=$(basename "$(dirname "$0")" .pak)
 ROM="$1"
-DS_DIR="/mnt/sdcard/Emus/rg35xxplus/DS.pak"
+DIR="$(dirname "$0")"
 SWITCH="/sys/class/power_supply/axp2202-battery/nds_pwrkey"
 export PATH="/mnt/vendor/bin:$PATH"
 
-. "$DS_DIR/test_btns"
+. "$DIR/test_btns"
 
 {
 while true; do

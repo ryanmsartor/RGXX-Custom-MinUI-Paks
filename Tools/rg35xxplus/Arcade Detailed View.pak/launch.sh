@@ -1,13 +1,27 @@
 #!/bin/sh
-if [ -d "/mnt/sdcard/Tools/rg35xxplus/Arcade Filename View.pak" ]; then # switch from detail to filename view
-	mv -f "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/map.txt" "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/.map_detail.txt"
-	mv -f "/mnt/sdcard/Tools/rg35xxplus/Arcade Filename View.pak" "/mnt/sdcard/Tools/rg35xxplus/Arcade Title View.pak";
-elif [ -d "/mnt/sdcard/Tools/rg35xxplus/Arcade Title View.pak" ]; then # switch from filename to title view
-	mv -f "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/.map_title.txt" "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/map.txt"
-	mv -f "/mnt/sdcard/Tools/rg35xxplus/Arcade Title View.pak" "/mnt/sdcard/Tools/rg35xxplus/Arcade Detailed View.pak";
-elif [ -d "/mnt/sdcard/Tools/rg35xxplus/Arcade Detailed View.pak" ]; then # switch from title to detail view
-	mv -f "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/map.txt" "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/.map_title.txt"
-	mv -f "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/.map_detail.txt" "/mnt/sdcard/Roms/Vertical Arcade (VARCADE)/map.txt"
-	mv -f "/mnt/sdcard/Tools/rg35xxplus/Arcade Detailed View.pak" "/mnt/sdcard/Tools/rg35xxplus/Arcade Filename View.pak";
+
+TOOLS="/mnt/sdcard/Tools/rg35xxplus/"
+
+VA="/mnt/sdcard/Roms/Vertical Arcade (VARCADE)"
+NG="/mnt/sdcard/Roms/Neo-Geo (NEOGEO)"
+
+if [ -d "${TOOLS}/Arcade Filename View.pak" ]; then # switch from detail to filename view
+	for DIR in "$VA" "$NG"; do
+		mv -f "${DIR}/map.txt" "${DIR}/.map_detail.txt";
+	done
+	mv -f "${TOOLS}/Arcade Filename View.pak" "${TOOLS}/Arcade Title View.pak";
+
+elif [ -d "${TOOLS}/Arcade Title View.pak" ]; then # switch from filename to title view
+	for DIR in "$VA" "$NG"; do
+		mv -f "${DIR}/.map_title.txt" "${DIR}/map.txt";
+	done
+	mv -f "${TOOLS}/Arcade Title View.pak" "${TOOLS}/Arcade Detailed View.pak";
+
+elif [ -d "${TOOLS}/Arcade Detailed View.pak" ]; then # switch from title to detail view
+	for DIR in "$VA" "$NG"; do
+		mv -f "${DIR}/map.txt" "${DIR}/.map_title.txt";
+		mv -f "${DIR}/.map_detail.txt" "${DIR}/map.txt";
+	done
+	mv -f "${TOOLS}/Arcade Detailed View.pak" "${TOOLS}/Arcade Filename View.pak";
+
 fi
-# sync
