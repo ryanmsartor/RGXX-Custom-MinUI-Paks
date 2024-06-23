@@ -1,7 +1,6 @@
 #!/bin/sh
-# AUTHOR: cybardev <sheikh@cybar.dev>
+# AUTHOR: shauninman <github.com/shauninman>
+# CO-AUTHOR: cybardev <sheikh@cybar.dev>
 
-RECENTS_FILE="/mnt/sdcard/.userdata/shared/.minui/recent.txt"
-
-rm -f $RECENTS_FILE
+rm -f "$SHARED_USERDATA_PATH/.minui/recent.txt"
 sync
