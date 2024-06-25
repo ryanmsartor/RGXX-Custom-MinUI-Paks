@@ -17,4 +17,17 @@ if [ "$?" -eq 1 ]; then
 	cp "$DIR/sdl_controllers.txt" "$PICO8_DIR";
 fi
 
+# enable volume and brightness controls
+echo "1" > "/sys/class/power_supply/axp2202-battery/nds_esckey"
+echo "0" > "/sys/class/power_supply/axp2202-battery/nds_pwrkey"
+{
+	/mnt/vendor/bin/ndsCtrl.dge
+} &
+
+# run the actual thingy
 cd "$PICO8_DIR" && ./pico8_dyn -splore -joystick 0 > ./splore-log.txt 2>&1
+
+# give volume and brightness controls back to dmenu.bin
+kill $!
+echo "0" > "/sys/class/power_supply/axp2202-battery/nds_esckey"
+echo "0" > "/sys/class/power_supply/axp2202-battery/nds_pwrkey"
