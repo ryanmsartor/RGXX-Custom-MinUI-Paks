@@ -33,6 +33,7 @@ II. Tools to get more out of MinUI
  7) 2048.pak - that one game where you smush powers of 2 together. It's already there buried in the stock firmware... might as well make it accessible.
  8) Arcade Detailed View.pak - toggles the names of your VARCADE games from their simplified names, to their full descriptions with parenthetical information (such as version number or publisher), to their bare filenames, and back again. Note that this tool will change its name to whatever view it will set the arcade titles to.
  9) Splore.pak (and associated stock OS apps) - gives full access to Splore, which is Pico-8's lovely native launcher and uber-addictive free game store. (see "Installing Pico-8 section)
+10) Clear Recently Played.pak - clears your Recently Played list in MinUI.
 
 
  ####################
@@ -120,10 +121,8 @@ Note: This method will respect whatever settings you had on the stock firmware f
  ####################
 
 1) Swapping between default and collections-based views will clear your Recently Played list. Not likely to change with future revisions.
-   
-2) Volume and brightness controls within the stock OS's native Splore app do not listen to the physical buttons and must be done within software.
 
-3) Power key does either nothing, or weird stuff, in many custom paks.
+2) Power key does either nothing, or weird stuff, in many custom paks - especially those based on RetroArch.
 
 
 
@@ -137,18 +136,20 @@ Note: This method will respect whatever settings you had on the stock firmware f
 
 - Brenoit - for his extensive help and testing, especially with regard to the native Pico-8 functionality. Cool dude.
 
+- Sheikh (cybardev) - for contributing Clear Recently Played.pak, as well as for extensive  troubleshooting, testing, and contributing some scripting for DS.pak.
+
 - Stubbs (Retro Handhelds) - for leading the amazing community that has connected me with all these wonderful people.
 
 - Russ (RetroGameCorps) - for linking to this repo from his SP setup guide, leading to much greater visibility for our project.
 
-- G.R.H. (a.k.a. cbepx-me) - for creating many of the scripts in the stock firmware, which these paks sometimes either reference or modify. Still unclear to me whether they are an Anbernic 
-  employee, or just an enthusiastic community dev whose work Anbernic has co-opted <_<;; I'd like to credit any other devs of the stock firmware as well, but to my knowledge none of their
-  identities are public.
+- moto (game-de-it
+
+- G.R.H. (cbepx-me) - for creating many of the scripts in the stock firmware, which these paks sometimes either reference or modify. Still unclear to me whether they are an Anbernic employee, or just an enthusiastic community dev whose work Anbernic has co-opted <_<;; I'd like to credit any other devs of the stock firmware as well, but to my knowledge none of their identities are public.
 
 - Anbernic - for developing and making all these nifty RG__XX__ devices, without which none of the aforementioned work would exist.
 
 - Testers - the following Discord users have been invaluable in testing, especially on devices I do not have. Without their time and effort, this project would not be able to progress.
-     - Lesynn      - RNS          - ozzyozzyjames
+     - Lesynn      - RNS          - ozzyozzyjames    
      - nbrXD       - axelrider    - Ramsa            - Adam D
 
 - If I forgot anyone else, please let me know so I can add them to the credits!
@@ -212,4 +213,13 @@ v9 - 2024-06-18
      - Updated most emulator launch scripts to be more SD card-agnostic
      - Fixed bug where d-pad/analog stick control hot-swapping disabled the A button
      - Updated instructions for creating custom paks and added list of default RA cores used by stock.
+
+v10- 2024-06-24
+     - Changed underlying mechanism of stylus input swap on DS.pak and fixed some bugs (thanks for the help Cybardev!)
+     - Added Clear Recently Played.pak (thanks Shaun Inman and Cybardev!)
+     - Power button is now the hotkey for input swap for PSPSA.pak
+     - Fixed bug where dpad wouldn't work in the menu sometimes after using input swap hotkeys
+     - Added List_Roms.sh stock OS app to generate a romlist.txt at the root of TF1
+     - Added volume/brightness controls to Splore.sh stock app
+     
 
