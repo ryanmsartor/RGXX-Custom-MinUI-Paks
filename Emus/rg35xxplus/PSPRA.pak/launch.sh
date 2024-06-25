@@ -29,3 +29,4 @@ done
 /mnt/vendor/deep/retro/retroarch -L "/mnt/vendor/deep/retro/cores/${EMU_EXE}_libretro.so" "$ROM" > "$LOGS_PATH/$EMU_TAG.txt" 2>&1
 
 kill $!
+echo "0" > "$SWITCH"
