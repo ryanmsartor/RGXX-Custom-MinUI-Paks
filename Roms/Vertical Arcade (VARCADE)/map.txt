@@ -14278,7 +14278,7 @@ sexygal.zip	Sexy Gal
 sexyparo.zip	Sexy Parodius
 sexyparoa.zip	Sexy Parodius
 sf.zip	Eyes Down
-sf2.zip	Galaxian
+sf2.zip	Street Fighter II: The World Warrior
 sf2049.zip	San Francisco Rush 2049
 sf2049se.zip	San Francisco Rush 2049: Special Edition
 sf2049te.zip	San Francisco Rush 2049: Tournament Edition
@@ -14485,7 +14485,7 @@ sf2v0043.zip	Street Fighter II': Champion Edition
 sf2yyc.zip	Street Fighter II': Champion Edition
 sf2yyc2.zip	Street Fighter II': Champion Edition
 sf_l1.zip	Slugfest
-sfa.zip	Manic Streak Features
+sfa.zip	Street Fighter Alpha: Warriors' Dreams
 sfa2.zip	Street Fighter Alpha 2
 sfa2u.zip	Street Fighter Alpha 2
 sfa2uhc.zip	Street Fighter Alpha 2
@@ -16481,7 +16481,7 @@ suzuk8h2j.zip	Suzuka 8 Hours 2
 suzuka8h.zip	Suzuka 8 Hours
 suzuka8hj.zip	Suzuka 8 Hours
 suzume.zip	Watashiha Suzumechan
-svc.zip	Hi-Lo Silver
+svc.zip	SNK vs. Capcom - SVC Chaos
 svcbfxl.zip	SNK vs. Capcom - SVC Chaos
 svcboot.zip	SNK vs. Capcom - SVC Chaos
 svcfd.zip	SNK vs. Capcom - SVC Chaos
