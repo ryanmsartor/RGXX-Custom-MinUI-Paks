@@ -27,7 +27,6 @@ II. Tools to get more out of MinUI
  1) Reboot into Stock.pak (and REBOOT-INTO-MINUI.sh APP) - allow you to swap back and forth between MinUI and the stock or modified stock firmware without having to manually fiddle with files on your SD cards.
  2) Switch to Collections.pak (and Switch to Consoles.pak) - allow you to swap between the default console-based view in MinUI, and a view that puts your custom collections front and center. I've also included some example Collections files to give you some ideas of how to build them.
  3) eBook Reader.pak - allows you to read eBooks from any location on either SD card.
- 4) File Browser.pak - allows you to navigate and sometimes modify or launch files and applications on either SD card.
  5) Music Player.pak - allows you to play audio files from the Music folder on either SD card.
  6) Retroarch.pak - launches Retroarch with no core/content loaded, so you can mess with settings.
  7) 2048.pak - that one game where you smush powers of 2 together. It's already there buried in the stock firmware... might as well make it accessible.
@@ -131,27 +130,17 @@ Note: This method will respect whatever settings you had on the stock firmware f
  ###############
 
 - Ryan Sartor (a.k.a. Ry) - that's me. I authored most of the custom scripts and other files and folders in this pak pack, and I maintain the project as a whole. If you'd like to support my work you can donate at https://ko-fi.com/rymsar .
-
 - Shaun Inman - for creating and maintaining the excellent MinUI, and for providing the dual boot scripts (which I have only minorly modified). Also, for tolerating all my Discord pings, and always helping out with scripting when I don't know how to accomplish something.
-
 - Brenoit - for his extensive help and testing, especially with regard to the native Pico-8 functionality. Cool dude.
-
 - Sheikh (cybardev) - for contributing Clear Recently Played.pak, as well as for extensive  troubleshooting, testing, and contributing some scripting for DS.pak.
-
 - Stubbs (Retro Handhelds) - for leading the amazing community that has connected me with all these wonderful people.
-
 - Russ (RetroGameCorps) - for linking to this repo from his SP setup guide, leading to much greater visibility for our project.
-
-- moto (game-de-it
-
-- G.R.H. (cbepx-me) - for creating many of the scripts in the stock firmware, which these paks sometimes either reference or modify. Still unclear to me whether they are an Anbernic employee, or just an enthusiastic community dev whose work Anbernic has co-opted <_<;; I'd like to credit any other devs of the stock firmware as well, but to my knowledge none of their identities are public.
-
+- moto (game-de-it) - for sharing insight into the virtual analog stick switching mechanism in the stock firmware.
+- G.R.H. (cbepx-me) - for creating many of the scripts in the stock firmware, which these paks sometimes either reference or modify.
 - Anbernic - for developing and making all these nifty RG__XX__ devices, without which none of the aforementioned work would exist.
-
-- Testers - the following Discord users have been invaluable in testing, especially on devices I do not have. Without their time and effort, this project would not be able to progress.
-     - Lesynn      - RNS          - ozzyozzyjames    
+- Testers and bug reporters - Without their time and effort, this project would not be able to progress.
+     - Lesynn      - RNS          - ozzyozzyjames    - lemonzest    - bub181
      - nbrXD       - axelrider    - Ramsa            - Adam D
-
 - If I forgot anyone else, please let me know so I can add them to the credits!
 
 
@@ -222,4 +211,10 @@ v10- 2024-06-24
      - Added List_Roms.sh stock OS app to generate a romlist.txt at the root of TF1
      - Added volume/brightness controls to Splore.sh stock app
      
+v11- 2024-09-??
+     - Removed File Browser.pak since MinUI proper now has Files.pak for this platform
+     - Added missing.png to P8-Native and Splore paks since MinUI added show.elf for this platform
+     - Corrected a few incorrect mappings in map.txt and .map_detail.txt (thx Shaun, bub181, lemonzest)
+     - Fixed inputs for DS.pak that broke after a recent MinUI update
+
 
