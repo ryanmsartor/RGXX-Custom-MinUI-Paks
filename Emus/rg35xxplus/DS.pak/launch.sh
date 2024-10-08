@@ -19,7 +19,7 @@ echo $STOCK_VOL > $VOLFILE
 echo "0" > "$SWITCH"
 echo "1" > "$ESC"
 
-export LD_LIBRARY_PATH="/usr/lib:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="/usr/lib32:/usr/lib:$LD_LIBRARY_PATH"
 
 if grep -q "RG28xx" /mnt/vendor/oem/board.ini; then
 	/mnt/vendor/ctrl/setNDS.sh savedir /mnt/sdcard;
