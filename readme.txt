@@ -215,6 +215,6 @@ v11- 2024-09-??
      - Removed File Browser.pak since MinUI proper now has Files.pak for this platform
      - Added missing.png to P8-Native and Splore paks since MinUI added show.elf for this platform
      - Corrected a few incorrect mappings in map.txt and .map_detail.txt (thx Shaun, bub181, lemonzest)
-     - Fixed inputs for DS.pak that broke after a recent MinUI update
+     - Fixed inputs for DS.pak that broke after a recent MinUI update (thx haysidney, kurtmorris, BrianMetallaoui, dleicht) 
 
 
