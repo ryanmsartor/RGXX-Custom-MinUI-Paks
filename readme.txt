@@ -17,10 +17,9 @@ I. Bonus emulators within MinUI
  3) GBARA.pak - adds stock's MGBA RetroArch core with bezels and shaders for the SP-lovers.
  4) N64.pak - adds stock's Mupen64 Plus Next RetroArch core for Nintendo 64 emulation.
  5) NEOGEO.pak - adds stock's FBAlpha2012 RetroArch core for Neo-Geo emulation.
- 6) P8-NATIVE.pak - adds native (i.e. not emulated) Pico-8. (see "Installing Pico-8" section)
- 7) PSPRA.pak - adds stock's PPSSPP RetroArch core for Playstation Portable emulation.
- 8) PSPSA.pak - adds stock's PPSSPP standalone for Playstation Portable emulation.
- 9) VARCADE.pak - adds stock's FBNEO pre-configured for vertical arcade emulation.
+ 6) PSPRA.pak - adds stock's PPSSPP RetroArch core for Playstation Portable emulation.
+ 7) PSPSA.pak - adds stock's PPSSPP standalone for Playstation Portable emulation.
+ 8) VARCADE.pak - adds stock's FBNEO pre-configured for vertical arcade emulation.
 
 II. Tools to get more out of MinUI
 
@@ -31,8 +30,7 @@ II. Tools to get more out of MinUI
  6) Retroarch.pak - launches Retroarch with no core/content loaded, so you can mess with settings.
  7) 2048.pak - that one game where you smush powers of 2 together. It's already there buried in the stock firmware... might as well make it accessible.
  8) Arcade Detailed View.pak - toggles the names of your VARCADE games from their simplified names, to their full descriptions with parenthetical information (such as version number or publisher), to their bare filenames, and back again. Note that this tool will change its name to whatever view it will set the arcade titles to.
- 9) Splore.pak (and associated stock OS apps) - gives full access to Splore, which is Pico-8's lovely native launcher and uber-addictive free game store. (see "Installing Pico-8 section)
-10) Clear Recently Played.pak - clears your Recently Played list in MinUI.
+ 9) Clear Recently Played.pak - clears your Recently Played list in MinUI.
 
 
  ####################
@@ -41,51 +39,7 @@ II. Tools to get more out of MinUI
 
 To install these paks, simply copy the included Emus, Roms, .Collections, and Tools folders onto the root of the SD card you have already installed MinUI on, merging them with the existing folders of the same name. Then, just add your Roms to the appropriate subfolders in "Roms/" and you should be good to go.
 
-If you don't want to install a particular extra pak, no problem - the only paks that rely on the existence of one another are those related to Splore and native Pico-8. You can freely delete any of these extras either before or after you load them onto your SD card without affecting any functionality of either MinUI or the stock firmware.
-
-
- ########################
-#    INSTALLING PICO-8   #
- ########################
-
-Installing native Pico-8 is a little more involved, but ultimately comes down to dragging and dropping a few files and folders where you need them, then running a couple of tools.
-
-Native Pico-8 on MinUI REQUIRES the following files and folders from this Pak Pack to be installed:
-
-- "Roms/APPS/REBOOT-INTO-MINUI.sh"
-- "Tools/rg35xxplus/Reboot into Stock.pak" (and its contents)
-- "Tools/rg35xxplus/Splore.pak" (and its contents)
-- "Tools/rgb30/Splore.pak" (and its contents)
-
-In order to use Splore to download free games from the BBS, you will also need:
-
-- "Roms/APPS/Install_Prereqs.sh"
-
-To get the most out of native Pico-8, the following files and folders can be installed as well:
-
-- "Emus/rg35xxplus/P8-NATIVE.pak" (and its contents)	= launches native P8 games from MinUI menu
-- "Emus/rgb30/P8-NATIVE.pak" (and its contents)		= ensures full compatibility with MinUI's native P8 on RGB30
-- "Roms/APPS/Splore.sh"					= allows native P8 and Splore to be launched as a stock OS app
-- "Roms/APPS/Import_Carts_to_Splore.sh"			= adds existing carts in Roms/PICO folders to offline Splore
-- "Roms/Pico-8 - Native (P8-NATIVE)" (and its contents)	= holds carts to launch with P8-NATIVE.pak
-- "Roms/PICO" (and its contents)			= holds carts for stock's Fake-08 emulator; can be imported to Splore
-
-1) Install your chosen subset of the above carts and apps by copying them to your SD card.
-
-2) Next, you will need a copy of the latest and greatest version of the Raspberry Pi edition of Pico-8. This can be bought and downloaded at https://www.lexaloffle.com/games.php?page=updates . Inside the .zip should be a folder labeled "pico-8" - copy this whole folder (not just its contents) into "Tools/rgb30/Splore.pak". [Yes, the rgb30 Splore.pak, not the rg35xxplus one.]
-
-3) If you already have some Pico-8 carts that you would like to put onto your device for offline play, you can add them to the "Roms/PICO" folder on either SD card at this point. If you are using a device that does not have Wi-Fi, you will definitely want to do this.
-
-4) Now, load your SD cards into your device and boot it up. Then use the "Reboot into Stock" tool.
-
-5) If you are using a device that has Wi-Fi, go to Settings > Network Settings > WIFI Settings, and set Enable WIFI to ON. Then input your WIFI Name and WIFI Password and make sure that you get assigned an IP address and your Status is Connected - then you can go back to the main menu.
-
-6) If you are connected to the internet, go to App Center > APPS > TF02, and run Install_Prereqs. You will get a Loading message, and the screen may turn black. Just be patient, as it takes a minute or two to run this script. This step is required before you will be able to download and play non-local carts off of Splore. 
-
-7) If you preloaded the "Roms/PICO" folders in step 3, run the Import_Carts_to_Splore app now. Again, if you are on a device without Wi-Fi, this step is pretty important.
-
-8) Now, you will be able to use Splore to play Pico-8 natively - no inaccurate emulation required - from both the stock OS and MinUI! For best results, make sure that you are connected to the internet BEFORE launching Splore. If you have booted back to MinUI, just wait for the signal icon in the top right corner to appear.
-
+If you don't want to install a particular extra pak, no problem. You can freely delete any of these extras either before or after you load them onto your SD card without affecting any functionality of either MinUI or the stock firmware.
 
 
  ################
@@ -93,7 +47,6 @@ To get the most out of native Pico-8, the following files and folders can be ins
  ################
 
 To update from one version of this Pak Pack to another, simply copy the files and folders that you want to update from the new version onto your SD card as though you were installing it anew, overwriting any conflicting files. I'll try not to break stuff between releases.
-
 
 
  #####################
@@ -113,7 +66,11 @@ To create your own MinUI paks for other stock RetroArch cores:
 
 Note: This method will respect whatever settings you had on the stock firmware for shaders and bezels.
 
+ ###############
+# NATIVE PICO-8 #
+ ###############
 
+Paks for playing native Pico-8 on MinUI for the RG_XX line of devices and RGB30 have been moved to: <https://github.com/ryanmsartor/Native-Pico-8-for-MinUI-for-RG_XX-devices-and-RGB30/releases/latest>.
 
  ####################
 #    KNOWN ISSUES    #
@@ -122,7 +79,6 @@ Note: This method will respect whatever settings you had on the stock firmware f
 1) Swapping between default and collections-based views will clear your Recently Played list. Not likely to change with future revisions.
 
 2) Power key does either nothing, or weird stuff, in many custom paks - especially those based on RetroArch.
-
 
 
  ###############
@@ -145,7 +101,6 @@ Note: This method will respect whatever settings you had on the stock firmware f
 
 
 Please note that this release is not "official" or otherwise endorsed by MinUI or Shaun Inman. I also take no responsibility for anything that happens due to your use or misuse of the files in this release. That said, feel free to ping @rymsar in the #rg35xx_plush_28xx channel of the Retro Handhelds Discord server if you have any questions, or suggestions for how to improve this Pak Pack.
-
 
 
  ##################
@@ -211,10 +166,8 @@ v10- 2024-06-24
      - Added List_Roms.sh stock OS app to generate a romlist.txt at the root of TF1
      - Added volume/brightness controls to Splore.sh stock app
      
-v11- 2024-09-??
+v11- 2024-11-23
      - Removed File Browser.pak since MinUI proper now has Files.pak for this platform
-     - Added missing.png to P8-Native and Splore paks since MinUI added show.elf for this platform
      - Corrected a few incorrect mappings in map.txt and .map_detail.txt (thx Shaun, bub181, lemonzest)
      - Fixed inputs for DS.pak that broke after a recent MinUI update (thx haysidney, kurtmorris, BrianMetallaoui, dleicht) 
-
-
+     - Removed Native Pico-8 and Splore paks - these are now hosted separately at <https://github.com/ryanmsartor/Native-Pico-8-for-MinUI-for-RG_XX-devices-and-RGB30/releases/latest>.
