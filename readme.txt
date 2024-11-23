@@ -171,3 +171,5 @@ v11- 2024-11-23
      - Corrected a few incorrect mappings in map.txt and .map_detail.txt (thx Shaun, bub181, lemonzest)
      - Fixed inputs for DS.pak that broke after a recent MinUI update (thx haysidney, kurtmorris, BrianMetallaoui, dleicht) 
      - Removed Native Pico-8 and Splore paks - these are now hosted separately at <https://github.com/ryanmsartor/Native-Pico-8-for-MinUI-for-RG_XX-devices-and-RGB30/releases/latest>.
+     - Retooled some of the Tools paks to be more platform-agnostic.
+     

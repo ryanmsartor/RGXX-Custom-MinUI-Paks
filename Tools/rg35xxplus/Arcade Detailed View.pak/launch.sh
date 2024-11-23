@@ -1,6 +1,7 @@
 #!/bin/sh
 
-TOOLS="/mnt/sdcard/Tools/rg35xxplus/"
+THIS_PAK="$(dirname "$0")"
+TOOLS="${THIS_PAK}/.."
 
 VA="/mnt/sdcard/Roms/Vertical Arcade (VARCADE)"
 NG="/mnt/sdcard/Roms/Neo-Geo (NEOGEO)"
