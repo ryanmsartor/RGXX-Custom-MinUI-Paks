@@ -13,13 +13,14 @@
 I. Bonus emulators within MinUI
 
  1) DC.pak - adds stock's Flycast Xtreme RetroArch core for Dreamcast emulation.
- 2) DS.pak - adds stock's DraStic standalone for Nintendo DS emulation.
+ 2) NDS.pak - adds stock's DraStic standalone for Nintendo DS emulation.
  3) GBARA.pak - adds stock's MGBA RetroArch core with bezels and shaders for the SP-lovers.
  4) N64.pak - adds stock's Mupen64 Plus Next RetroArch core for Nintendo 64 emulation.
  5) NEOGEO.pak - adds stock's FBAlpha2012 RetroArch core for Neo-Geo emulation.
- 6) PSPRA.pak - adds stock's PPSSPP RetroArch core for Playstation Portable emulation.
- 7) PSPSA.pak - adds stock's PPSSPP standalone for Playstation Portable emulation.
- 8) VARCADE.pak - adds stock's FBNEO pre-configured for vertical arcade emulation.
+ 6) P8-NATIVE.pak - adds native (i.e. not emulated) Pico-8. (see "Installing Pico-8" section)
+ 7) PSPRA.pak - adds stock's PPSSPP RetroArch core for Playstation Portable emulation.
+ 8) PSPSA.pak - adds stock's PPSSPP standalone for Playstation Portable emulation.
+ 9) VARCADE.pak - adds stock's FBNEO pre-configured for vertical arcade emulation.
 
 II. Tools to get more out of MinUI
 
@@ -40,6 +41,36 @@ II. Tools to get more out of MinUI
 To install these paks, simply copy the included Emus, Roms, .Collections, and Tools folders onto the root of the SD card you have already installed MinUI on, merging them with the existing folders of the same name. Then, just add your Roms to the appropriate subfolders in "Roms/" and you should be good to go.
 
 If you don't want to install a particular extra pak, no problem. You can freely delete any of these extras either before or after you load them onto your SD card without affecting any functionality of either MinUI or the stock firmware.
+
+
+ ########################
+#    INSTALLING PICO-8   #
+ ########################
+
+Installing native Pico-8 is a little more involved, but ultimately comes down to dragging and dropping a few files and folders where you need them, then running a couple of tools.
+
+Getting the most of native Pico-8 on MinUI requires the following files and folders from this Pak Pack to be installed as well:
+
+- "Emus/rg35xxplus/P8-NATIVE.pak" (and its contents)
+- "Roms/APPS/REBOOT-INTO-MINUI.sh"
+- "Tools/rg35xxplus/Reboot into Stock.pak" (and its contents)
+
+
+1) Copy the three items listed above to your SD card, merging them in with your existing Emus, Roms, and Tools folders.
+
+2) Next, you will need a copy of the latest and greatest version of the Raspberry Pi edition of Pico-8. This can be bought and downloaded at https://www.lexaloffle.com/games.php?page=updates . Inside the .zip should be a folder labeled "pico-8" - copy the two files "pico8_dyn" and "pico8.dat" into the "Emus/rg35xxplus/P8-NATIVE.pak/bin/" folder.
+
+3) Add any Pico-8 carts you would like to play offline to the "Roms/Pico-8 (P8-NATIVE)/" folder. 
+
+If you do not plan to use Splore to browse for games online, then your setup is now complete! If you would like to set up your Wi-Fi to enable Splore capability in MinUI, keep reading.
+
+4) Now, load your SD cards into your device and boot it up. Then use the "Reboot into Stock" tool.
+
+5) Go to Settings > Network Settings > WIFI Settings, and set Enable WIFI to ON. Then input your WIFI Name and WIFI Password and make sure that you get assigned an IP address and your Status is Connected - then you can go back to the main menu.
+
+6) Go to App Center > APPS > TF02, and run REBOOT-INTO-MINUI.
+
+7) Now, you will be able to use Splore to play Pico-8 natively - no inaccurate emulation required! For best results, make sure that you are connected to the internet BEFORE launching Splore, by waiting a moment after the signal icon in the top right corner has appeared.
 
 
  ################
@@ -96,7 +127,7 @@ Paks for playing native Pico-8 on MinUI for the RG_XX line of devices and RGB30 
 - Anbernic - for developing and making all these nifty RG__XX__ devices, without which none of the aforementioned work would exist.
 - Testers and bug reporters - Without their time and effort, this project would not be able to progress.
      - Lesynn      - RNS          - ozzyozzyjames    - lemonzest    - bub181
-     - nbrXD       - axelrider    - Ramsa            - Adam D
+     - nbrXD       - axelrider    - Ramsay           - Adam D
 - If I forgot anyone else, please let me know so I can add them to the credits!
 
 
@@ -172,4 +203,11 @@ v11- 2024-11-23
      - Fixed inputs for DS.pak that broke after a recent MinUI update (thx haysidney, kurtmorris, BrianMetallaoui, dleicht) 
      - Removed Native Pico-8 and Splore paks - these are now hosted separately at <https://github.com/ryanmsartor/Native-Pico-8-for-MinUI-for-RG_XX-devices-and-RGB30/releases/latest>.
      - Retooled some of the Tools paks to be more platform-agnostic.
+     
+v12- 2025-02-02
+     - Renamed DS.pak to NDS.pak in order to play better with the extra paks for other devices (particularly those made by tenlevels) so that users can use the NDS roms folder across multiple devices more easily.
+     - Added back (a new version of) P8-NATIVE.pak, for native Pico-8 capability, including Splore.
+          - Splore is now launched from the game list instead of as a tool.
+          - Tap the power button while native Pico-8 is running, to close it and return to MinUI; this removes the possibility of getting stuck in Splore or the console and needing to hard reboot.
+          - Simpler setup for first time users.
      
