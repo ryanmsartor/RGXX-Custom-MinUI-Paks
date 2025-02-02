@@ -97,11 +97,6 @@ To create your own MinUI paks for other stock RetroArch cores:
 
 Note: This method will respect whatever settings you had on the stock firmware for shaders and bezels.
 
- ###############
-# NATIVE PICO-8 #
- ###############
-
-Paks for playing native Pico-8 on MinUI for the RG_XX line of devices and RGB30 have been moved to: <https://github.com/ryanmsartor/Native-Pico-8-for-MinUI-for-RG_XX-devices-and-RGB30/releases/latest>.
 
  ####################
 #    KNOWN ISSUES    #
