@@ -4,7 +4,7 @@ export HOME="$(dirname "$0")"
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
 export PATH="$HOME/bin:$PATH"
 
-. "$DIR/bin/test_btns"
+. "$HOME/bin/test_btns"
 
 monitor_for_kill() {
 while true; do
@@ -27,7 +27,7 @@ launch_cart() {
 
 monitor_for_kill &
 
-if [ -f "$PICO8_DIR/pico8_dyn" ]; then
+if [ -f "$HOME/bin/pico8_dyn" ]; then
 	cd "$HOME/bin" && launch_cart "$1"
 else
 	show.elf "$HOME/missing.png" 4
