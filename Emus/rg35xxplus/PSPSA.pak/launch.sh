@@ -20,7 +20,7 @@ while true; do
 		sleep 2
 		Test_Button_POWER
 		if [ $? -eq 10 ]; then
-			killall -15 drastic
+			killall -15 PPSSPPSDL
 			touch /tmp/shutdown_from_pak
 		fi
 	fi
