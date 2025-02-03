@@ -12,6 +12,8 @@ if [ -f "$AUTO_RESUME_FILE" ]; then
 	PAK_TO_USE="$(echo "$ROM_TO_RESUME" | cut -d'(' -f2 | cut -d')' -f1)"
 	LAUNCH="$SDCARD_PATH/Emus/$PLATFORM/$PAK_TO_USE.pak/launch.sh"
 
-	# Launch the game via the appropriate pak
-	"$LAUNCH" "$ROM_TO_RESUME"
+	if [ -f "$LAUNCH" ]; then
+		# Launch the game via the appropriate pak
+		"$LAUNCH" "$ROM_TO_RESUME"
+	fi
 fi
