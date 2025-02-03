@@ -8,4 +8,4 @@ reboot
 
 while :; do
     sleep 1
-end
+done
