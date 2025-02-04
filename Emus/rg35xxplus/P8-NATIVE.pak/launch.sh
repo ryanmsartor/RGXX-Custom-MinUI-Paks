@@ -3,6 +3,8 @@
 export HOME="$(dirname "$0")"
 export LD_LIBRARY_PATH="$HOME/lib:$LD_LIBRARY_PATH"
 export PATH="$HOME/bin:$PATH"
+AUTO_RESUME_FILE="/mnt/sdcard/.userdata/shared/.minui/auto_resume.txt"
+ROM="$1"
 
 . "$HOME/bin/test_btns"
 
