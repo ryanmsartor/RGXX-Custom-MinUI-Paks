@@ -9,7 +9,14 @@ export PATH="$HOME/bin:$PATH"
 monitor_for_kill() {
 while true; do
 	Test_Button_POWER
-	[ $? -eq 10 ] && killall -15 pico8_dyn
+	if [ $? -eq 10 ]; then
+		sleep 2
+		Test_Button_POWER
+		if [ $? -eq 10 ]; then
+			touch /tmp/shutdown_from_pak
+		fi
+		killall -15 pico8_dyn
+	fi
 	sleep 0.05
 done
 }
@@ -31,6 +38,17 @@ if [ -f "$HOME/bin/pico8_dyn" ]; then
 	cd "$HOME/bin" && launch_cart "$1"
 else
 	show.elf "$HOME/missing.png" 4
+fi
+
+if [ -f /tmp/shutdown_from_pak ]; then
+	echo 1 > /sys/class/power_supply/axp2202-battery/work_led
+	echo "$ROM" > "$AUTO_RESUME_FILE"
+	sync
+	rm /tmp/minui_exec
+	shutdown
+	while :; do
+		sleep 1
+	done
 fi
 
 kill "$!"
