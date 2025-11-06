@@ -1,0 +1,80 @@
+#!/bin/bash
+# Device key config for H700
+
+ev0="/dev/input/event0"
+ev1="/dev/input/event1"
+btnA="BTN_SOUTH"
+btnB="BTN_EAST"
+btnX="BTN_NORTH"
+btnY="BTN_C"
+btnL1="BTN_WEST"
+btnR1="BTN_Z"
+btnL2="BTN_SELECT"
+btnR2="BTN_START"
+btnL3="BTN_TR2"
+btnR3="BTN_MODE"
+btnSE="BTN_TL"
+btnST="BTN_TR"
+btnFUNC="BTN_TL2"
+btnFUNCSP="BTN_GOTO"
+btnPOWER="KEY_POWER"
+
+
+Test_Button_A(){
+  evtest --query $ev1 "EV_KEY" $btnA
+}
+
+Test_Button_B(){
+  evtest --query $ev1 "EV_KEY" $btnB
+}
+
+Test_Button_X(){
+  evtest --query $ev1 "EV_KEY" $btnX
+}
+
+Test_Button_Y(){
+  evtest --query $ev1 "EV_KEY" $btnY
+}
+
+Test_Button_L1(){
+  evtest --query $ev1 "EV_KEY" $btnL1
+}
+
+Test_Button_R1(){
+  evtest --query $ev1 "EV_KEY" $btnR1
+}
+
+Test_Button_L2(){
+  evtest --query $ev1 "EV_KEY" $btnL2
+}
+
+Test_Button_R2(){
+  evtest --query $ev1 "EV_KEY" $btnR2
+}
+Test_Button_L3(){
+  evtest --query $ev1 "EV_KEY" $btnL3
+}
+
+Test_Button_R3(){
+  evtest --query $ev1 "EV_KEY" $btnR3
+}
+
+Test_Button_SE(){
+  evtest --query $ev1 "EV_KEY" $btnSE
+}
+
+Test_Button_ST(){
+  evtest --query $ev1 "EV_KEY" $btnST
+}
+
+Test_Button_FUNC(){
+  evtest --query $ev1 "EV_KEY" $btnFUNC
+}
+
+Test_Button_FUNCSP(){
+  evtest --query $ev1 "EV_KEY" $btnFUNC
+}
+
+Test_Button_POWER(){
+  evtest --query $ev0 "EV_KEY" $btnPOWER
+}
